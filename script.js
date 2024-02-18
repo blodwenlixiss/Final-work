@@ -1,7 +1,4 @@
 "use strict";
-const proffessionList = document.getElementById("proffession-list");
-const firstSect = document.getElementById("firstSection");
-const redLine = document.getElementById("redLine");
 
 // function isElementInViewport(el) {
 //   let rect = el.getBoundingClientRect();
@@ -14,19 +11,30 @@ const redLine = document.getElementById("redLine");
 //     redLine.classList.add("fill");
 //   }
 // });
+const precentages = [80, 100, 70, 80];
+const skills = ["HTML", "CSS", "Javascript", "BootsTrap"];
 
-// function isElementInViewport(el) {
-//   let rect = el.getBoundingClientRect();
-//   let scrollThreshold = el.offsetHeight * 0.8;
-//   return rect.top <= scrollThreshold;
-// }
+window.addEventListener("scroll", function () {
+  const firstSect = document.getElementById("firstSection");
+  const firstsectTop = firstSect.offsetTop;
+  const secondSection = document.querySelector(".second-section");
+  const secondSectionTop = secondSection.offsetTop;
+  const windowHeight = window.innerHeight;
+  const proffessionListItems = document.querySelectorAll(
+    "#proffession-list li"
+  );
 
-// window.addEventListener("scroll", () => {
-//   let redLine = document.getElementById("redLine");
-//   let firstSection = document.getElementById("firstSection");
-//   if (isElementInViewport(firstSection)) {
-//     redLine.style.width = "80%";
-//   } else {
-//     redLine.classList.remove("fill");
-//   }
-// });
+  if (
+    window.scrollY + windowHeight >= firstsectTop &&
+    window.scrollY + windowHeight <= secondSectionTop
+  ) {
+    precentages.forEach((e, index) => {
+      proffessionListItems[index].innerHTML = `
+      ${skills[index]}<span> (${e}%)</span>
+        <div class="grey-line">
+          <div class="red-line" style="width: ${e}%;"></div>
+        </div>
+      `;
+    });
+  }
+});
