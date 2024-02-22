@@ -29,12 +29,25 @@ window.addEventListener("scroll", function () {
     window.scrollY + windowHeight <= secondSectionTop
   ) {
     precentages.forEach((e, index) => {
-      proffessionListItems[index].innerHTML = `
-      ${skills[index]}<span> (${e}%)</span>
-        <div class="grey-line">
-          <div class="red-line" style="width: ${e}%;"></div>
-        </div>
-      `;
+      proffessionListItems[index].querySelector(".red-line").style.width =
+        e + "%";
     });
   }
+});
+
+const buttons = document.querySelectorAll(".buttons button");
+const images = document.querySelectorAll(".image");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    buttons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+    const filter = button.getAttribute("data-filter");
+    images.forEach((image) => {
+      if (filter === "all" || image.classList.contains(filter)) {
+        image.classList.add("show");
+      } else {
+        image.classList.remove("show");
+      }
+    });
+  });
 });
