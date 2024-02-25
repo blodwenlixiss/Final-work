@@ -29,48 +29,54 @@
   <body>
     <header>
       <div class="header-wrapper">
-        <div class="header-top">
-          <div class="logo-text">
-            <h1 style="margin: 0">Roca<span style="color: #0081ff">.</span></h1>
-            <span class="header-resume">Resume Template</span>
+        <div class="background-images">
+          <div class="header-top">
+            <div class="logo-text">
+              <h1 style="margin: 0">
+                Roca<span style="color: #0081ff">.</span>
+              </h1>
+              <span class="header-resume">Resume Template</span>
+            </div>
+            <div class="image-count">
+              <span class="image-count-num">01</span>
+              <span class="image-count-about">About me</span>
+            </div>
           </div>
-          <div class="image-count">
-            <span class="image-count-num">01</span>
-            <span class="image-count-about">About me</span>
+          <div class="header-information">
+            <p>
+              <span class="header-information-span-top">Hi, I' Am</span><br />
+              Luka Goginashvili <br />
+              <span class="header-information-span-bottom"
+                >I am Front-End Developer</span
+              >
+            </p>
           </div>
-        </div>
-        <div class="header-information">
-          <p>
-            <span class="header-information-span-top">Hi, I' Am</span><br />
-            Luka Goginashvili <br />
-            <span class="header-information-span-bottom"
-              >I am Front-End Developer</span
-            >
-          </p>
-        </div>
-        <div class="social-links">
-          <ul class="header-information-list">
-            <li>
-              <a href="https://www.facebook.com/profile.php?id=100010949988970"
-                ><img src="./images/facebook.png" alt="fb"
-              /></a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/luka-goginashvili-24a4272a6/"
-                ><img src="./images/linkedin.png" alt="linkedin"
-              /></a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/"
-                ><img src="./images/youtube.png" alt="youtube"
-              /></a>
-            </li>
-          </ul>
-        </div>
-        <div class="header-client">
-          <div class="header-client-position">
-            <p><span>100%</span> Satisfied Clients</p>
-            <hr />
+          <div class="social-links">
+            <ul class="header-information-list">
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100010949988970"
+                  ><img src="./images/facebook.png" alt="fb"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/luka-goginashvili-24a4272a6/"
+                  ><img src="./images/linkedin.png" alt="linkedin"
+                /></a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/"
+                  ><img src="./images/youtube.png" alt="youtube"
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-client">
+            <div class="header-client-position">
+              <p><span>100%</span> Satisfied Clients</p>
+              <hr />
+            </div>
           </div>
         </div>
       </div>
@@ -212,30 +218,18 @@
             Eager to collaborate and contribute to innovative projects.
           </p>
           <div class="dashed-big">
-            <img
-              class="personal-img"
-              src="./images/d4.svg"
-              alt="Luka Goginashvili"
-            />
-            <img
-              class="personal-img"
-              src="./images/d3.svg"
-              alt="Luka Goginashvili"
-            />
-            <img
-              class="personal-img"
-              src="./images/d5.svg"
-              alt="Luka Goginashvili"
-            />
+            <img class="personal-img" src="./images/d4.svg" />
           </div>
           <div class="slider">
-            <div class="slider-text">
-              <span class="claws">"</span>
-              <span class="job">Graphic Designer</span>
-              <h3 class="job">John Doe</h3>
+            <div id="slider-text">
+              <div class="claws"><span>“</span></div>
+              <span class="profession">Back-End Developer</span>
+              <h3 class="profession-name">Giorgi Bazadze</h3>
             </div>
-            <div class="slider-btn">
-              <div id="slider-btn"></div>
+            <div class="slider-block">
+              <button class="slider-btn"></button>
+              <button class="slider-btn"></button>
+              <button class="slider-btn"></button>
             </div>
           </div>
         </div>
@@ -244,7 +238,7 @@
       <section class="third-section">
         <aside class="third-sect-aside">
           <ul class="aside-btn-list buttons">
-            <li><button class="active" data-filter="all">All</button></li>
+            <li><button data-filter="all">All</button></li>
             <li><button data-filter="bakery">Bakery</button></li>
             <li><button data-filter="booking">Booking</button></li>
             <li><button data-filter="onoff">OnOff</button></li>
@@ -252,28 +246,48 @@
           </ul>
         </aside>
         <div id="thirdSectGrid">
-          <div class="third-sect-container">
+          <div id="third-sect-container">
             <div class="container-text">
               <a href="https://blodwenlixiss.github.io/homework-SA/">
-                <img class="image bakery" src="./images/Bakery.png"
-              /></a>
+                <img class="image bakery" src="./images/Bakery.png" />
+              </a>
+              <div class="container-hover">
+                <img src="./images/heart.svg" alt="" />
+                <span class="container-hover-text">3 Months ago</span>
+                <span class="container-hover-title">Bakery</span>
+              </div>
             </div>
             <div class="container-text">
               <a href="https://blodwenlixiss.github.io/middleterm/">
                 <img class="image booking" src="./images/booking.png"
               /></a>
+              <div class="container-hover">
+                <img src="./images/heart.svg" alt="" />
+                <span class="container-hover-text">3 Months ago</span>
+                <span class="container-hover-title">Booking</span>
+              </div>
             </div>
             <div class="container-text">
               <a href="https://blodwenlixiss.github.io/markup-homework/">
                 <img class="image onoff" src="./images/onoff.png" />
               </a>
+              <div class="container-hover">
+                <img src="./images/heart.svg" alt="" />
+                <span class="container-hover-text">3 Months ago</span>
+                <span class="container-hover-title">On-Off</span>
+              </div>
             </div>
             <div class="container-text">
               <a
                 href="https://blodwenlixiss.github.io/huddle-landing-page-with-alternating-feature-blocks-master/"
               >
-                <img class="image huddle" src="./images/Huddle.png"
-              /></a>
+                <img class="image huddle" src="./images/Huddle.png" />
+              </a>
+              <div class="container-hover">
+                <img src="./images/heart.svg" alt="" />
+                <span class="container-hover-text">3 Months ago</span>
+                <span class="container-hover-title">Huddle</span>
+              </div>
             </div>
           </div>
         </div>
@@ -317,11 +331,7 @@
               placeat dolore sapiente pariatur quaerat! Dolorum omnis quod quo
               soluta non nihil, ullam ex dolor ipsum, labore repellendus
               perferendis laudantium minus molestiae praesentium. Voluptas, et
-              quo recusandae saepe repellat nulla facere necessitatibus beatae
-              rerum reiciendis! Tempora corrupti ducimus pariatur culpa nulla
-              necessitatibus odio accusantium tenetur aliquam doloribus? Sunt
-              inventore voluptate incidunt voluptas, unde eius obcaecati dolorem
-              est reiciendis, beatae atque quis cum quos nesciunt culpa!
+              quo recusandae saepe
             </article>
           </div>
           <div class="split-line">
@@ -396,7 +406,7 @@
         <h3 style="text-transform: uppercase">contact us</h3>
         <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
 
-        <form class="form-container" action="">
+        <form id="formContainer" action="">
           <div class="input-group">
             <input
               type="text"
